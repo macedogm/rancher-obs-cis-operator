@@ -1,6 +1,7 @@
 <services>
   <service name="docker_label_helper" mode="buildtime">
   </service>
+<--
   <service name="tar_scm">
     <param name="url">https://github.com/rancher/cis-operator.git</param>
     <param name="scm">git</param>
@@ -14,5 +15,10 @@
   </service>
   <service name="go_modules">
     <param name="archive">_service:recompress:tar_scm:cis-operator.tar.gz</param>
+  </service>
+-->
+  <service name="recompress">
+    <param name="compression">gz</param>
+    <param name="file">*</param>
   </service>
 </services>
