@@ -3,6 +3,9 @@
 # Builder image
 FROM opensuse/bci/golang:stable as builder
 
+COPY . /tmp
+RUN ls -lha /tmp 
+
 ARG CIS_OPERATOR=cis-operator
 
 # Copy and unpack build artifacts
