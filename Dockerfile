@@ -11,6 +11,8 @@ WORKDIR /"$CIS_OPERATOR"
 
 RUN CGO_ENABLED=0 go build -o "$CIS_OPERATOR"
 
+# TODO remove
+RUN ls
 
 # Final image
 FROM opensuse/bci/bci-micro:latest
