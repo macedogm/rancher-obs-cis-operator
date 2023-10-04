@@ -6,7 +6,6 @@ FROM opensuse/bci/golang:stable as builder
 ARG CIS_OPERATOR=cis-operator
 
 COPY . /"$CIS_OPERATOR"
-RUN ls -lha /"$CIS_OPERATOR"
 
 WORKDIR /"$CIS_OPERATOR" 
 
