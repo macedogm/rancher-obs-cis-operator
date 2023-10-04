@@ -1,5 +1,5 @@
 <services>
   <service name="docker_label_helper" mode="buildtime">
   </service>
-  <service mode="buildtime" name="tar" />
+<!--  <service mode="buildtime" name="tar" /> -->
 </services>
