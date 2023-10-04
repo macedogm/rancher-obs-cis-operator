@@ -1,0 +1,16 @@
+workflow:
+  steps:
+    - branch_package:
+        source_project: home:gmacedo:rancher
+        source_package: cis-operator
+        target_project: home:gmacedo:rancher:dev
+  filters:
+    event: pull_request
+
+rebuild_master:
+  steps:
+    - rebuild_package:
+        project: home:gmacedo:rancher
+        package: cis-operator
+  filters:
+    event: push
