@@ -24,9 +24,11 @@
   </service>
 -->
   <service mode="buildtime" name="tar" />
+<!--
   <service mode="buildtime" name="recompress">
     <param name="file">*.tar</param>
     <param name="compression">xz</param>
   </service>
   <service mode="buildtime" name="set_version" />
+-->
 </services>

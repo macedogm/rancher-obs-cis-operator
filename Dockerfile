@@ -3,14 +3,13 @@
 # Builder image
 FROM opensuse/bci/golang:stable as builder
 
-COPY . /tmp
-RUN ls -lha /tmp 
-
 ARG CIS_OPERATOR=cis-operator
 
-# Copy and unpack build artifacts
-ADD "$CIS_OPERATOR".tar.gz /
-ADD vendor.tar.gz /"$CIS_OPERATOR"
+COPY . /"$CIS_OPERATOR"
+
+## Copy and unpack build artifacts
+#ADD "$CIS_OPERATOR".tar.gz /
+#ADD vendor.tar.gz /"$CIS_OPERATOR"
 
 WORKDIR /"$CIS_OPERATOR" 
 
