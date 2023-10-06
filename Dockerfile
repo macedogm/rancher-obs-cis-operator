@@ -1,7 +1,7 @@
 #!BuildTag: cis-operator:latest
 
 # Builder image
-FROM opensuse/bci/golang:stable as builder
+FROM bci/golang:1.21 as builder
 
 ARG CIS_OPERATOR=cis-operator
 
@@ -11,11 +11,8 @@ WORKDIR /"$CIS_OPERATOR"
 
 RUN CGO_ENABLED=0 go build -o "$CIS_OPERATOR"
 
-# TODO remove
-RUN ls
-
 # Final image
-FROM opensuse/bci/bci-micro:latest
+FROM bci/bci-micro:15.5
 
 ARG CIS_OPERATOR=cis-operator
 
