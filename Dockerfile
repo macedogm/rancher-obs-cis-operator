@@ -21,5 +21,7 @@ COPY --from=builder /"$CIS_OPERATOR"/pkg /pkg
 
 USER 65535:65535
 
+RUN ls -lha
+
 CMD ["$CIS_OPERATOR"]
 
